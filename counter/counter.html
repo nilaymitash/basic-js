@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <!-- A vertical navbar -->
+    <nav class="navbar bg-light">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../tip-calculator/tip-calculator.html">Tip Calculator</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid h-100">
+        <div class="row h-100  align-items-center">
+            <div class="col-12">
+                <div class="row text-center">
+                    <div class="col-sm"></div>
+                    <div class="col-sm">
+                        <span id="counter-span"></span>
+                    </div>
+                    <div class="col-sm"></div>
+                  </div>
+                  <div class="row text-center">
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <span id="counter-span"></span>
+                        <button id="increaseBtn" type="button" class="btn btn-primary btn-lg" onclick="increaseCounter()" onmouseover="changeColor(this, 'orange')" onmouseout="resetColor(this)">Increase</button>
+                    </div>
+                    <div class="col-2">
+                        <span id="counter-span"></span>
+                        <button id="decreaseBtn" type="button" class="btn btn-dark btn-lg" onclick="decreaseCounter()" onmouseover="changeColor(this, 'pink')" onmouseout="resetColor(this)">Decrease</button>
+                    </div>
+                    <div class="col-2">
+                        <span id="counter-span"></span>
+                        <button id="resetBtn" type="button" class="btn btn-secondary btn-lg" onclick="resetCounter()" onmouseover="changeColor(this, 'green')" onmouseout="resetColor(this)">Reset</button>
+                    </div>
+                    <div class="col-3"></div>
+                  </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+
+    <script src="counter.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

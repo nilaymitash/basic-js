@@ -1,0 +1,18 @@
+body, html {
+    font-family: 'Roboto', serif;
+    height: 100%;
+}
+
+.center {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px; /* margin is -0.5 * dimension */
+    margin-top: -25px;
+}
+
+#counter-span {
+    font-size: 50px;
+}
