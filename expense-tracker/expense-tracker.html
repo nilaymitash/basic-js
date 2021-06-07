@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>Expense Tracker</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-
     <div class="container-fluid h-100">
         <div class="row h-100">
             <div class="col-3 h-100">
@@ -26,10 +25,10 @@
                             <a class="nav-link" href="../tip-calculator/tip-calculator.html">Tip Calculator</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="to-do.html">To Do List</a>
+                            <a class="nav-link" href="../to-do/to-do.html">To Do List</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../expense-tracker/expense-tracker.html">Expense Tracker</a>
+                            <a class="nav-link active" href="expense-tracker.html">Expense Tracker</a>
                         </li>
                     </ul>
                 </nav>
@@ -38,7 +37,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="jumbotron text-center">
-                            <h1 class="display-5">To-Do List</h1>
+                            <h1 class="display-5">Expense Tracker</h1>
                         </div>
                     </div>
                 </div>
@@ -46,33 +45,58 @@
                     <div class="col-12">
                         <div class="container-fluid">
                             <div class="row align-items-center">
-                                <div class="col-4"></div>
-                                <div class="col-4">
+                                <div class="col-12">
                                     <form>
                                         <div class="input-group mb-3">
-                                            <input autocomplete="off" id="to-do-item" type="text" class="form-control" placeholder="Add an item!">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Name:</span>
+                                              </div>
+                                            <input id="expense-name" type="text" class="form-control" placeholder="Where was the expense made?" autocomplete="off">
                                         </div>
 
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="input-group mb-3">
-                                                    <button id="add" type="button" class="btn btn-primary" onclick="addItem()">Add Item</button>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Date:</span>
+                                                      </div>
+                                                    <input id="expense-date" type="date" class="form-control" placeholder="mm/dd/yy" min="2018-01-01" max="2021-12-31" autocomplete="off">
                                                 </div>
                                             </div>
                                             <div class="col-6">
                                                 <div class="input-group mb-3">
-                                                    <button id="clear" type="button" class="btn btn-primary" onclick="clearList()">Clear List</button>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Amount ($):</span>
+                                                      </div>
+                                                    <input id="expense-amount" type="text" class="form-control" placeholder="0.00" autocomplete="off">
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <button type="button" class="btn btn-success" onclick="addExpense()">Add Expense</button>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="col-4"></div>
                             </div>
 
-                            <div class="row">
+                            <div class="row top-margin-10">
                                 <div class="col-12">
-                                    <ul id="task-list"></ul>
+                                    <table id="expense-table" class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                              <th scope="col">Name</th>
+                                              <th scope="col">Date</th>
+                                              <th scope="col">Amount</th>
+                                              <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="expense-tbody">
+
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +107,7 @@
     </div>
 
 
-    <script src="to-do.js"></script>
+    <script src="expense-tracker.js"></script>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
