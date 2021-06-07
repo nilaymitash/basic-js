@@ -14,8 +14,8 @@ function clearList() {
 function createListItem(item) {
     return "<li id='li_" +itemCounter+ "'>" 
     + "<span id='li_text" +itemCounter+ "'>" +item+"</span>" 
-    + "&nbsp;&nbsp;&nbsp;&nbsp;<button type='button' class='btn btn-primary' onclick=\"removeThisItem('li_" +itemCounter+ "')\">X</button>"
-    + "&nbsp;&nbsp;&nbsp;&nbsp;<button type='button' class='btn btn-primary' onclick=\"markAsDone('li_text" +itemCounter+ "')\">Mark as done</button>"
+    + "&nbsp;&nbsp;&nbsp;&nbsp;<button type='button' class='btn btn-secondary' onclick=\"removeThisItem('li_" +itemCounter+ "')\">X</button>"
+    + "&nbsp;&nbsp;&nbsp;&nbsp;<button type='button' class='btn btn-secondary' onclick=\"markAsDone('li_text" +itemCounter+ "')\">Mark as done</button>"
     + "</li>";
 }
 
