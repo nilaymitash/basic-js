@@ -1,4 +1,6 @@
-var expenseCounter = 0;
+var expenseCounter = 0,
+errorStyle = "border-color: red; border-width: 1px;";
+
 
 function addExpense() {
     expenseCounter++;
@@ -21,7 +23,7 @@ function validateExpense(expenseName, expenseDate, expenseAmount) {
 
 function validateName(expenseName) {
     if(expenseName.length < 1) {
-        document.getElementById("expense-name").style = "border-color: red; border-width: 1px;";
+        document.getElementById("expense-name").style = errorStyle;
         return false;
     }
     document.getElementById("expense-name").style = null;
@@ -30,7 +32,7 @@ function validateName(expenseName) {
 
 function validateDate(expenseDate) {
     if(expenseDate.length < 1) {
-        document.getElementById("expense-date").style = "border-color: red; border-width: 1px;";
+        document.getElementById("expense-date").style = errorStyle;
         return false;
     }
     document.getElementById("expense-date").style = null;
@@ -40,7 +42,7 @@ function validateDate(expenseDate) {
 function validateAmount(expenseAmount) {
     var amount = Number(expenseAmount);
     if(isNaN(amount) || amount <= 0) {
-        document.getElementById("expense-amount").style = "border-color: red; border-width: 1px;";
+        document.getElementById("expense-amount").style = errorStyle;
         return false;
     }
     document.getElementById("expense-amount").style = null;
